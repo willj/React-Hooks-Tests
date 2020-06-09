@@ -1,24 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Counter from './hooks/counter';
+import Variants from './hooks/Variants';
+import SignUp from './hooks/SignUp';
+import Quote from './hooks/Quote';
+import Foaas from './hooks/Foaas';
+
+import Identity from './identity/Identity';
+import LoginStatus from './identity/LoginStatus';
+import IdentitySample from './hooks/IdentitySample';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Identity>
+          <LoginStatus />
+
+          <Counter startNum={10} />
+
+          <Variants />
+
+          <SignUp />
+
+          <Quote />
+
+          <Foaas />
+
+          <IdentitySample />
+
+        </Identity>
     </div>
   );
 }
